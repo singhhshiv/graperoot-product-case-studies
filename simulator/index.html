@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GrapeRoot · Context Decision Lab</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><a href="../">GRAPEROOT <span>/ PRODUCT STUDY</span></a><span class="badge">Synthetic learning model</span></header>
+<main>
+<p class="eyebrow">01 / CONTEXT DELIVERY</p><h1>Less context.<br>Enough to solve the task?</h1>
+<p class="intro">Explore the trade-off between upfront context and on-demand retrieval. Change the assumptions. Inspect what gets left out. Make a decision you can explain.</p>
+<div class="workspace"><aside aria-label="Simulation controls"><h2>Set the constraints</h2>
+<label for="task">Developer task</label><select id="task"></select>
+<label for="budget">Total context budget <output id="budgetValue" for="budget"></output></label><input id="budget" type="range" min="0" max="4000" step="50" value="1200">
+<label for="overhead">Assumed tokens per tool call <output id="overheadValue" for="overhead"></output></label><input id="overhead" type="range" min="0" max="400" step="10" value="100">
+<label for="latency">Assumed milliseconds per call <output id="latencyValue" for="latency"></output></label><input id="latency" type="range" min="0" max="1000" step="50" value="200">
+<p class="muted">All costs, task labels, and retrieval orders are invented. No AI model runs here.</p><button id="reset" class="secondary">Reset assumptions</button>
+</aside><section aria-label="Strategy comparison"><div id="results" aria-live="polite"></div></section></div>
+<section class="method"><h2>What this model does—and leaves out</h2><p>Each strategy visits a fixed ranking of snippets and skips entries that do not fit. On-demand retrieval adds one tool call per snippet. Upfront context has an assumed 40 ms packing cost and no retrieval calls. Hybrid uses half the budget for upfront selection, then tries the on-demand order with the remaining budget.</p><p>Coverage counts required snippets present; it does not measure correctness. Different rankings confound retrieval and delivery effects. Latency excludes indexing, model generation, retries, and caching. The simulator does not implement GrapeRoot's actual architecture.</p><a href="../case-studies/02-context-delivery.md">Read the case-study source →</a></section>
+<section class="decision"><div><p class="eyebrow">YOUR PRODUCT CALL</p><h2>What would you choose?</h2><p>Explain the trade-off, missing evidence, and what result would change your mind.</p></div><div><label for="note">Decision and rationale</label><textarea id="note" rows="5" placeholder="For this task, I would test… because… I still need evidence that…"></textarea><button id="export">Export decision + assumptions</button><p id="storage" class="muted" role="status"></p></div></section>
+</main><footer>Retrospective learning artifact · No measured GrapeRoot outcomes · Local draft</footer><script type="module" src="app.mjs"></script>
+</body></html>
