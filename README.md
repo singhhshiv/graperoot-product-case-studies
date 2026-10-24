@@ -10,6 +10,14 @@ GrapeRoot is an AI developer-tools product designed to help coding agents unders
 - [Evidence register and open questions](evidence/README.md)
 - [Interactive simulator](simulator/index.html)
 
+## Focused repositories
+
+- [Enterprise discovery](https://github.com/singhhshiv/graperoot-enterprise-discovery) — pilot design, discovery questions, and requirements.
+- [Growth Funnel Lab](https://github.com/singhhshiv/graperoot-growth-funnel-lab) — synthetic activation funnel and metric definitions.
+- [AI Context Evaluation](https://github.com/singhhshiv/graperoot-ai-context-evaluation) — benchmark protocol and task fixture.
+- [Prioritization Lab](https://github.com/singhhshiv/graperoot-product-prioritization-lab) — assumptions, RICE exercise, and roadmap.
+- [PM Interview Kit](https://github.com/singhhshiv/graperoot-pm-interview-kit) — story bank, evidence map, and rehearsal questions.
+
 The case studies distinguish company-reported history, your account of your work, retrospective analysis, and proposed plans. The simulator uses invented tasks, costs, retrieval orders, and relevance labels. It is not GrapeRoot software or a reproduction of its benchmarks.
 
 ## Run locally
